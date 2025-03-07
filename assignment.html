@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Specials</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        .tile {
+            display: inline-block;
+            padding: 20px;
+            margin: 10px;
+            background-color: #ffcc00;
+            cursor: pointer;
+            font-size: 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Our Restaurant</h1>
+    <div class="tile" onclick="goToMenu('Menu')">Menu</div>
+    <div class="tile" onclick="goToRandomCategory()">Specials</div>
+    <div class="tile" onclick="goToMenu('Map')">Map</div>
+
+    <script>
+        function goToMenu(category) {
+            alert("Loading " + category + " page...");
+            // In real scenario, you would redirect using window.location.href = 'menu.html?category=' + category;
+        }
+
+        function goToRandomCategory() {
+            const categories = ['Lunch', 'Dinner', 'Sushi', 'Desserts', 'Drinks'];
+            const randomCategory = categories[Math.floor(Math.random() * categories.length)];
+            alert("Loading " + randomCategory + " page...");
+            // In real scenario, you would redirect using window.location.href = 'menu.html?category=' + randomCategory;
+        }
+    </script>
+</body>
+</html>
